@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 */
 
-package org.apache.cordova.test;
+package freego.david;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -42,7 +42,7 @@ import android.util.Base64;
 /**
 * This class exposes methods in Cordova that can be called from JavaScript.
 */
-public class Echo extends CordovaPlugin {
+public class QRReader extends CordovaPlugin {
     protected static final String TAG = "qr_plugin";
     private CordovaWebView mWebView;
     private BroadcastReceiver mReceiver;
@@ -103,7 +103,7 @@ public class Echo extends CordovaPlugin {
         if (action.equals("echo")) {
             this.mCallbackContext = callbackContext;
             String a1 = args.getString(0);
-            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "from java" ));
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "from java jw" ));
         } else if(action.equals("echoAsync")) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
