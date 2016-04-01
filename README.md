@@ -7,9 +7,9 @@
 # to you under the Apache License, Version 2.0 (the
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
-# 
+#
 # http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -18,35 +18,9 @@
 # under the License.
 #
 -->
-## Mobile Spec Suite ##
 
-This project is a set of automated & manual tests that test
-Cordova core functionality.
+cordova-plugin-echo
+------------------------
 
-To set up the project, use
-`cordova-mobile-spec/createmobilespec/createmobilespec.js`.
-See the [README.md](createmobilespec/README.md) in that directory.
+This is a plugin implementation of the Echo function to test the bridge. It is currently used by Mobile Spec to test and benchmark the bridge.
 
-### Requirements ###
-
-Repositories required:
-
-- **cordova-cli**
-  (Install pre-requisites by running `npm install` inside of cordova-cli).
-- **cordova-js**
-- All **plugins**.
-- **Platforms** to test
-  (e.g., cordova-android, cordova-ios, cordova-blackberry,
-  cordova-wp8, or cordova-windows).
-- **cordova-mobile-spec**
-  (Install pre-requisites by running `npm install` inside of
-  [createmobilespec](createmobilespec)).
-- All repositories must be checked out as peers to each other.
-
-### Performance ###
-
-For reference purposes, the document
-[AndroidBridgePerformance_300.pdf](AndroidBridgePerformance_300.pdf)
-in this directory outlines the Android bridge performance using
-`cordova-mobile-spec` and the manual bridge test.
-The tests were performed with **Cordova 3.0.0**.
