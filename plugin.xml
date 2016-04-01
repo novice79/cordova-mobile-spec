@@ -20,7 +20,7 @@
 -->
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="org.apache.cordova.test.echo"
+           id="freego.david.do"
       version="0.1.0">
     <name>Echo</name>
 
