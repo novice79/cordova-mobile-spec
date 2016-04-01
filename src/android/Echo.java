@@ -43,6 +43,7 @@ import android.util.Base64;
 * This class exposes methods in Cordova that can be called from JavaScript.
 */
 public class Echo extends CordovaPlugin {
+    protected static final String TAG = "qr_plugin";
     private CordovaWebView mWebView;
     private BroadcastReceiver mReceiver;
     private IntentFilter mFilter;
@@ -74,14 +75,20 @@ public class Echo extends CordovaPlugin {
 
     }
     public void onPause(boolean multitasking) {
+        //注销获取扫描结果的广播
+        mWebView.getContext().unregisterReceiver(mReceiver);
+        super.onPause(multitasking);
     }
  
     public void onResume(boolean multitasking) {
-        super.onResume();
+        super.onResume(multitasking);
         //注册广播来获取扫描结果
         mWebView.getContext().registerReceiver(mReceiver, mFilter);
     }
     public void onDestroy() {
+        mReceiver = null;
+        mFilter = null;
+        super.onDestroy();
     }
 
      /**
