@@ -30,11 +30,9 @@ var exec = require('cordova/exec'),
  * @param forceAsync  Whether to force an async return value (for testing native->js bridge).
  */
 module.exports = function(successCallback, errorCallback, message) {
-    var action = 'echo';
-
-    exec(successCallback, errorCallback, "Echo", 'echo', message);
+    exec(successCallback, errorCallback, "QRReader", 'echo', message);
 };
 
 module.exports.jw = function(successCallback, errorCallback, message) {
-    exec(callback, null, "Echo", "echoAsync", message);
+    exec(successCallback, errorCallback, "QRReader", "echoAsync", message);
 };
